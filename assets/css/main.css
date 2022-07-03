@@ -16,6 +16,7 @@ font-family: 'Roboto', sans-serif;
 body{
 font-family: 'Roboto', sans-serif;
     padding: 0 20px;
+    background-color:antiquewhite;
 }
 h1{
     font-family: 'Noto Serif', serif;
@@ -53,7 +54,7 @@ LOGO
 }
 .side-menu{
     width:50%;
-    height: 4px;
+    height: 8px;
     background-color: #000;
     display: block;
     margin:5px;
@@ -107,6 +108,7 @@ NAVIGATION
     font-weight: 700;
     border-bottom: 2px solid orangered;
     padding-bottom: 5px;
+    cursor: pointer;
 }
 
 /*
@@ -114,8 +116,14 @@ NAVIGATION
  MAIN BANNER HEADING
 ==================================
 */
+.banner{
+    padding:20px 0 100px 0;
+}
+img{
+    border-radius: 3px;
+}
 .banner-content{
-    width: 800px;
+    width: 1000px;
     margin: 0 auto;
     position: relative;
 }
@@ -128,22 +136,19 @@ NAVIGATION
     
      
 }
-.banner-content img::after{
-    content: "";
-    clear:both;
-    display: table;
-    
+svg{
+    color:orange;
 }
 .heading-primary{
     font-weight: 100;
-    font-size: 70px;
+    font-size: 100px;
     word-spacing: 4px;
 }
 .banner__ball{
     width:200px;
     height: 200px;
     border-radius: 50%;
-    background-color: orangered;
+    background-color: orange;
 }
 .banner-text{
     position: absolute;
@@ -154,9 +159,7 @@ NAVIGATION
     margin-bottom: 2px;
     
 }
-.clearfix{
-    height:50vh;
-}
+
 .heading-primary{
     position: relative;
 }
@@ -176,9 +179,59 @@ NAVIGATION
 .heading-primary span:first-child{
     margin-top: 50px;
 }
-.img-aside img{
-    width:300px;
-    height: auto;
-    max-height: 350px;
+/*
+CONTAINING FLOATS
+*/
+.clearfix::after{
     
+    content: "";
+    display: block;
+    clear:both;
+    
+}
+
+/*
+MALE COLLECTION COMPONENT
+*/
+.male-collection{
+    width:1000px;
+    margin:0 auto;
+}
+.collection-content{
+    position: relative;
+}
+.male-collection-content img{
+    
+    width:200px;
+    height: auto;
+    max-height: 250px;
+    float: left; 
+    
+}
+
+.primary-text{
+    
+    font-size: 12px;
+    font-weight: 400;
+    position: relative;
+    top:100px;
+    padding-left: 30%;
+    line-height: 1.5rem;
+    
+}
+.social-media{
+    position: absolute;
+    top:60%;
+    right: 2%;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.social-media .p{
+    margin-bottom: 10px;
+
+}
+.socila-media a:hover{
+    cursor: pointer;
 }
